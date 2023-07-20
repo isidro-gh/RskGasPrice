@@ -29,7 +29,8 @@ namespace GasPrice.Data.Services
         public Tuple<decimal, decimal> GetInUsd()
         {
             var c = new WebClient();
-            c.Headers.Add("X-CMC_PRO_API_KEY", ConfigurationManager.AppSettings["CMC_PRO_API_KEY"]);
+            // c.Headers.Add("X-CMC_PRO_API_KEY", ConfigurationManager.AppSettings["CMC_PRO_API_KEY"]);
+            c.Headers.Add("X-CMC_PRO_API_KEY", "94e4cdb8-827c-4749-969b-6e5e3e1eebd6");
             
 
             var r = c.DownloadString("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=2&convert=USD");

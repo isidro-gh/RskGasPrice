@@ -30,6 +30,7 @@ namespace GasPrice.Data.Services
         {
             var c = new WebClient();
             c.Headers.Add("X-CMC_PRO_API_KEY", ConfigurationManager.AppSettings["CMC_PRO_API_KEY"]);
+            
 
             var r = c.DownloadString("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=2&convert=USD");
 
